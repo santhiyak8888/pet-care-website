@@ -2,832 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="PetCare - thoughtfully designed essentials for modern pets."
-    >
-
+    <meta name="description" content="PetCare - thoughtfully designed essentials for modern pets.">
     <title>PetCare | Modern Pet Essentials</title>
 
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet"
-    >
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-
-    <header class="site-header">
-
-        <nav class="navbar">
-
-            <a href="#home" class="logo">
-                petcare
-            </a>
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false"
-            >
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-
-                <li>
-                    <a href="#home" class="active">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#shop">
-                        Shop
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#sets">
-                        sets
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#story">
-                        Our story
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#quiz">
-                        pet gear quiz
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#real-pets">
-                        Real pets
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#blog">
-                        Blog
-                    </a>
-                </li>
-
-            </ul>
-
-            <button
-                class="cart-button"
-                id="cartButton"
-                type="button"
-                aria-label="Shopping cart"
-            >
-                <i class="fa-solid fa-bag-shopping"></i>
-
-                <span id="cartCount">
-                    0
-                </span>
-            </button>
-
-        </nav>
-
-    </header>
-
-
-    <!-- ================= MAIN ================= -->
-
-    <main>
-
-        <!-- ================= HERO ================= -->
-
-        <section class="hero-section" id="home">
-
-            <div class="hero-content reveal">
-
-                <span class="eyebrow">
-                    MODERN PET ESSENTIALS
-                </span>
-
-                <h1>
-                    Throughtfully Designed For Modern Pets
-                </h1>
-
-                <p>
-                    Thoughtful essentials made for everyday adventures,
-                    comfortable routines, and the pets who make life better.
-                </p>
-
-                <button
-                    class="primary-button"
-                    type="button"
-                    data-scroll="#shop"
-                >
-                    shop collection
-
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-            </div>
-
-
-            <div class="image-box reveal">
-
-                <img
-                    src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1200&q=85"
-                    alt="Happy dog enjoying time outdoors"
-                >
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SHOP ================= -->
-
-        <section class="products section-shell" id="shop">
-
-            <div class="section-heading reveal">
-
-                <div>
-
-                    <span class="eyebrow">
-                        SHOP THE EDIT
-                    </span>
-
-                    <h2>
-                        Hot Right Now
-                    </h2>
-
-                </div>
-
-                <p>
-                    Everyday gear with a clean look, practical details
-                    and plenty of comfort.
-                </p>
-
-            </div>
-
-
-            <div class="product-grid">
-
-                <!-- PRODUCT 1 -->
-
-                <article class="card reveal">
-
-                    <div class="card-image">
-
-                        <img
-                            src="https://pawsitivityshop.com/cdn/shop/files/CatLeash1.1copy_a675b45e-db58-4ab3-9ce9-e5d0b6f5eb01.png?v=1709979676&width=1200"
-                            alt="Cat wearing a modern harness"
-                            loading="lazy"
-                        >
-
-                        <span class="tag">
-                            FEATURED
-                        </span>
-
-                    </div>
-
-
-                    <div class="card-content">
-
-                        <h3>
-                            Support ridge carry harness
-                        </h3>
-
-                        <div class="price">
-
-                            <span>
-                                $85.99 USD
-                            </span>
-
-                            <del>
-                                $95.99 USD
-                            </del>
-
-                        </div>
-
-                        <button
-                            class="card-button add-cart"
-                            type="button"
-                            data-product="Support ridge carry harness"
-                        >
-                            Add to bag
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 2 -->
-
-                <article class="card reveal">
-
-                    <div class="card-image">
-
-                        <img
-                            src="https://images.pexels.com/photos/16259035/pexels-photo-16259035.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                            alt="Dog wearing a harness outdoors"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div class="card-content">
-
-                        <h3>
-                            Mini Trooper Small Harness set
-                        </h3>
-
-                        <div class="price">
-
-                            <span>
-                                $85.99 USD
-                            </span>
-
-                            <del>
-                                $95.99 USD
-                            </del>
-
-                        </div>
-
-                        <button
-                            class="card-button add-cart"
-                            type="button"
-                            data-product="Mini Trooper Small Harness set"
-                        >
-                            Add to bag
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 3 -->
-
-                <article class="card reveal">
-
-                    <div class="card-image">
-
-                        <img
-                            src="https://images.pexels.com/photos/31871494/pexels-photo-31871494.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                            alt="Dog resting inside a pet carrier"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div class="card-content">
-
-                        <h3>
-                            All purpose kennels pet porter
-                        </h3>
-
-                        <div class="price">
-
-                            <span>
-                                $85.99 USD
-                            </span>
-
-                            <del>
-                                $95.99 USD
-                            </del>
-
-                        </div>
-
-                        <button
-                            class="card-button add-cart"
-                            type="button"
-                            data-product="All purpose kennels pet porter"
-                        >
-                            Add to bag
-                        </button>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SETS / FOOD ================= -->
-
-        <section class="food section-shell reveal" id="sets">
-
-            <div class="food-image">
-
-                <img
-                    src="https://images.pexels.com/photos/3981763/pexels-photo-3981763.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                    alt="Pet food and carefully arranged pet essentials"
-                    loading="lazy"
-                >
-
-            </div>
-
-
-            <div class="food-content">
-
-                <span class="eyebrow">
-                    DAILY RITUALS
-                </span>
-
-                <h2>
-                    Good food. Good habits. Happier pets.
-                </h2>
-
-                <p>
-                    Build a better everyday routine with practical products
-                    chosen around the needs of modern pets and their people.
-                </p>
-
-                <button
-                    class="shop-button"
-                    type="button"
-                    data-scroll="#shop"
-                >
-                    Shop food &amp; essentials
-
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= OUR STORY ================= -->
-
-        <section class="story section-shell reveal" id="story">
-
-            <div class="story-copy">
-
-                <span class="eyebrow">
-                    OUR STORY
-                </span>
-
-                <h2>
-                    Made for the way pets live today.
-                </h2>
-
-                <p>
-                    PetCare started with a simple idea: pet gear should work
-                    beautifully without looking out of place in your home.
-                    We focus on useful details, comfortable materials and
-                    timeless design.
-                </p>
-
-                <button
-                    class="text-button"
-                    type="button"
-                    data-scroll="#quiz"
-                >
-                    Find the right gear
-
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-            </div>
-
-
-            <div class="story-stats">
-
-                <div>
-
-                    <strong>
-                        01
-                    </strong>
-
-                    <span>
-                        Comfort first
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>
-                        02
-                    </strong>
-
-                    <span>
-                        Clean design
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>
-                        03
-                    </strong>
-
-                    <span>
-                        Everyday use
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= PET GEAR ================= -->
-
-        <section class="product2 section-shell" id="quiz">
-
-            <div class="section-heading centered reveal">
-
-                <div>
-
-                    <span class="eyebrow">
-                        COMPLETE THE ROUTINE
-                    </span>
-
-                    <h2>
-                        Your Dog's Mind,Body,And Spirit
-                    </h2>
-
-                </div>
-
-            </div>
-
-
-            <div class="gear-grid">
-
-                <!-- GEAR 1 -->
-
-                <article class="gear-card reveal">
-
-                    <img
-                        src="https://images.pexels.com/photos/8690956/pexels-photo-8690956.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                        alt="Border Collie wearing a harness"
-                        loading="lazy"
-                    >
-
-                    <div>
-
-                        <span>
-                            01 / GEAR
-                        </span>
-
-                        <h3>
-                            Walk smarter
-                        </h3>
-
-                        <p>
-                            Comfortable walking gear designed for everyday movement.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <!-- GEAR 2 -->
-
-                <article class="gear-card reveal">
-
-                    <img
-                        src="https://images.pexels.com/photos/3981763/pexels-photo-3981763.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                        alt="Pet travel essentials including a bag and accessories"
-                        loading="lazy"
-                    >
-
-                    <div>
-
-                        <span>
-                            02 / TRAVEL
-                        </span>
-
-                        <h3>
-                            Go anywhere
-                        </h3>
-
-                        <p>
-                            Simple travel essentials for short trips and bigger adventures.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= REAL PETS ================= -->
-
-        <section class="real-pets section-shell reveal" id="real-pets">
-
-            <div>
-
-                <span class="eyebrow">
-                    REAL PETS
-                </span>
-
-                <h2>
-                    Built for real life, tested by curious noses.
-                </h2>
-
-            </div>
-
+<header class="site-header">
+    <nav class="navbar">
+        <a href="#home" class="logo">petcare</a>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#sets">sets</a></li>
+            <li><a href="#story">Our story</a></li>
+            <li><a href="#quiz">pet gear quiz</a></li>
+            <li><a href="#real-pets">Real pets</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+
+        <button class="cart-button" id="cartButton" type="button" aria-label="Shopping cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="cartCount">0</span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero-section" id="home">
+        <div class="hero-content reveal">
+            <span class="eyebrow">MODERN PET ESSENTIALS</span>
+            <h1>Thoughtfully Designed For Modern Pets</h1>
             <p>
-                From daily walks to weekend adventures, PetCare is designed
-                around the messy, happy reality of living with pets.
+                Thoughtful essentials made for everyday adventures,
+                comfortable routines, and the pets who make life better.
             </p>
-
-        </section>
-
-
-        <!-- ================= BLOG ================= -->
-
-        <section class="blog section-shell reveal" id="blog">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <span class="eyebrow">
-                        FROM THE BLOG
-                    </span>
-
-                    <h2>
-                        Better pet days start here.
-                    </h2>
-
-                </div>
-
-                <button
-                    class="text-button"
-                    type="button"
-                >
-                    View all
-
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-            </div>
-
-
-            <div class="blog-grid">
-
-                <article>
-
-                    <span>
-                        CARE
-                    </span>
-
-                    <h3>
-                        How to choose a comfortable harness
-                    </h3>
-
-                    <p>
-                        Simple things to check before your next walk.
-                    </p>
-
-                </article>
-
-
-                <article>
-
-                    <span>
-                        TRAVEL
-                    </span>
-
-                    <h3>
-                        Making pet travel easier
-                    </h3>
-
-                    <p>
-                        A practical checklist for calmer adventures.
-                    </p>
-
-                </article>
-
-
-                <article>
-
-                    <span>
-                        LIFESTYLE
-                    </span>
-
-                    <h3>
-                        Designing a pet-friendly home
-                    </h3>
-
-                    <p>
-                        Useful ideas that keep your space looking good.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="footer-container">
-
-            <div class="footer-brand">
-
-                <a
-                    class="logo"
-                    href="#home"
-                >
-                    petcare
-                </a>
-
-                <p>
-                    Thoughtfully designed essentials for modern pets.
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Info
-                </h3>
-
-                <a href="#story">
-                    Our story
-                </a>
-
-                <a href="#shop">
-                    Shop
-                </a>
-
-                <a href="#sets">
-                    sets
-                </a>
-
-                <a href="#blog">
-                    Blog
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Support
-                </h3>
-
-                <a href="#shop">
-                    Shipping
-                </a>
-
-                <a href="#shop">
-                    Returns
-                </a>
-
-                <a href="#shop">
-                    Size guide
-                </a>
-
-                <a href="#shop">
-                    Contact
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    For Retailers
-                </h3>
-
-                <a href="#shop">
-                    Wholesale
-                </a>
-
-                <a href="#shop">
-                    Trade account
-                </a>
-
-                <a href="#shop">
-                    Retailer login
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Work With Us
-                </h3>
-
-                <a href="#real-pets">
-                    Real pets
-                </a>
-
-                <a href="#blog">
-                    Creators
-                </a>
-
-                <a href="#blog">
-                    Careers
-                </a>
-
-                <a href="#blog">
-                    Collaborate
-                </a>
-
-            </div>
-
-
-            <div class="footer-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=700&q=85"
-                    alt="Happy dog sitting outdoors"
-                    loading="lazy"
-                >
-
-            </div>
-
+            <button class="primary-button" type="button" data-scroll="#shop">
+                shop collection
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
 
-
-        <div class="footer-bottom">
-
-            <span>
-                © <span id="year"></span> PetCare
-            </span>
-
-            <span>
-                Made for pets. Designed for people.
-            </span>
-
-        </div>
-
-    </footer>
-
-
-    <!-- ================= JAVASCRIPT ================= -->
-
-    <!-- Keep script.js separate -->
-    <script src="script.js"></script>
-
-</body>
-</html>                </div>
-                <div class="card-content">
-                    <h3>All purpose kennels pet porter</h3>
-                    <div class="price"><span>$85.99 USD</span><del>$95.99 USD</del></div>
-                    <button class="card-button add-cart" type="button" data-product="All purpose kennels pet porter">Add to bag</button>
-                </div>
-            </article>
+        <div class="image-box reveal">
+            <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1200&q=85"
+                 alt="Happy dog enjoying time outdoors">
+            <div class="image-badge">
+                <i class="fa-solid fa-paw"></i>
+                Made for happy pets
+            </div>
         </div>
     </section>
 
+    <!-- SHOP -->
+    <section class="products section-shell" id="shop">
+        <div class="section-heading reveal">
+            <div>
+                <span class="eyebrow">SHOP THE EDIT</span>
+                <h2>Hot Right Now</h2>
+            </div>
+            <p>
+                Everyday gear with a clean look, practical details and plenty of comfort.
+            </p>
+        </div>
+
+        <div class="product-grid">
+
+            <article class="card reveal">
+                <div class="card-image">
+                    <img src="https://pawsitivityshop.com/cdn/shop/files/CatLeash1.1copy_a675b45e-db58-4ab3-9ce9-e5d0b6f5eb01.png?v=1709979676&width=1200"
+                         alt="Cat wearing a modern harness"
+                         loading="lazy">
+                    <span class="tag">FEATURED</span>
+                    <button class="quick-view" type="button" aria-label="Quick view">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
+                <div class="card-content">
+                    <span class="product-category">PET GEAR</span>
+                    <h3>Support ridge carry harness</h3>
+                    <div class="price">
+                        <span>$85.99 USD</span>
+                        <del>$95.99 USD</del>
+                    </div>
+                    <button class="card-button add-cart" type="button"
+                            data-product="Support ridge carry harness">
+                        Add to bag
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-image">
+                    <img src="https://images.pexels.com/photos/16259035/pexels-photo-16259035.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                         alt="Dog wearing a harness outdoors"
+                         loading="lazy">
+                    <button class="quick-view" type="button" aria-label="Quick view">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
+                <div class="card-content">
+                    <span class="product-category">PET GEAR</span>
+                    <h3>Mini Trooper Small Harness set</h3>
+                    <div class="price">
+                        <span>$85.99 USD</span>
+                        <del>$95.99 USD</del>
+                    </div>
+                    <button class="card-button add-cart" type="button"
+                            data-product="Mini Trooper Small Harness set">
+                        Add to bag
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-image">
+                    <img src="https://images.pexels.com/photos/31871494/pexels-photo-31871494.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                         alt="Dog resting inside a pet carrier"
+                         loading="lazy">
+                    <button class="quick-view" type="button" aria-label="Quick view">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
+                <div class="card-content">
+                    <span class="product-category">TRAVEL</span>
+                    <h3>All purpose kennels pet porter</h3>
+                    <div class="price">
+                        <span>$85.99 USD</span>
+                        <del>$95.99 USD</del>
+                    </div>
+                    <button class="card-button add-cart" type="button"
+                            data-product="All purpose kennels pet porter">
+                        Add to bag
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SETS -->
     <section class="food section-shell reveal" id="sets">
         <div class="food-image">
             <img src="https://images.pexels.com/photos/3981763/pexels-photo-3981763.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                 alt="Pet food and carefully arranged pet essentials" loading="lazy">
+                 alt="Pet food and pet essentials"
+                 loading="lazy">
         </div>
+
         <div class="food-content">
             <span class="eyebrow">DAILY RITUALS</span>
             <h2>Good food. Good habits. Happier pets.</h2>
@@ -836,11 +181,13 @@
                 chosen around the needs of modern pets and their people.
             </p>
             <button class="shop-button" type="button" data-scroll="#shop">
-                Shop food &amp; essentials <i class="fa-solid fa-arrow-right"></i>
+                Shop food &amp; essentials
+                <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
     </section>
 
+    <!-- STORY -->
     <section class="story section-shell reveal" id="story">
         <div class="story-copy">
             <span class="eyebrow">OUR STORY</span>
@@ -852,90 +199,134 @@
                 timeless design.
             </p>
             <button class="text-button" type="button" data-scroll="#quiz">
-                Find the right gear <i class="fa-solid fa-arrow-right"></i>
+                Find the right gear
+                <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
 
         <div class="story-stats">
-            <div><strong>01</strong><span>Comfort first</span></div>
-            <div><strong>02</strong><span>Clean design</span></div>
-            <div><strong>03</strong><span>Everyday use</span></div>
+            <div>
+                <strong>01</strong>
+                <span>Comfort first</span>
+            </div>
+            <div>
+                <strong>02</strong>
+                <span>Clean design</span>
+            </div>
+            <div>
+                <strong>03</strong>
+                <span>Everyday use</span>
+            </div>
         </div>
     </section>
 
+    <!-- PET GEAR -->
     <section class="product2 section-shell" id="quiz">
         <div class="section-heading centered reveal">
             <div>
                 <span class="eyebrow">COMPLETE THE ROUTINE</span>
-                <h2>Your Dog's Mind,Body,And Spirit</h2>
+                <h2>Your Dog's Mind, Body, And Spirit</h2>
             </div>
         </div>
 
         <div class="gear-grid">
+
             <article class="gear-card reveal">
-                <img src="https://images.pexels.com/photos/8690956/pexels-photo-8690956.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                     alt="Border Collie wearing a harness" loading="lazy">
+                <div class="gear-image">
+                    <img src="https://images.pexels.com/photos/8690956/pexels-photo-8690956.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                         alt="Border Collie wearing a harness"
+                         loading="lazy">
+                    <span class="gear-number">01</span>
+                </div>
+
                 <div>
                     <span>01 / GEAR</span>
                     <h3>Walk smarter</h3>
-                    <p>Comfortable walking gear designed for everyday movement.</p>
+                    <p>
+                        Comfortable walking gear designed for everyday movement.
+                    </p>
                 </div>
             </article>
 
             <article class="gear-card reveal">
-                <img src="https://images.pexels.com/photos/3981763/pexels-photo-3981763.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                     alt="Pet travel essentials including a bag and accessories" loading="lazy">
+                <div class="gear-image">
+                    <img src="https://images.pexels.com/photos/3981763/pexels-photo-3981763.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                         alt="Pet travel essentials"
+                         loading="lazy">
+                    <span class="gear-number">02</span>
+                </div>
+
                 <div>
                     <span>02 / TRAVEL</span>
                     <h3>Go anywhere</h3>
-                    <p>Simple travel essentials for short trips and bigger adventures.</p>
+                    <p>
+                        Simple travel essentials for short trips and bigger adventures.
+                    </p>
                 </div>
             </article>
+
         </div>
     </section>
 
+    <!-- REAL PETS -->
     <section class="real-pets section-shell reveal" id="real-pets">
         <div>
             <span class="eyebrow">REAL PETS</span>
             <h2>Built for real life, tested by curious noses.</h2>
         </div>
+
         <p>
             From daily walks to weekend adventures, PetCare is designed
             around the messy, happy reality of living with pets.
         </p>
     </section>
 
+    <!-- BLOG -->
     <section class="blog section-shell reveal" id="blog">
         <div class="section-heading">
             <div>
                 <span class="eyebrow">FROM THE BLOG</span>
                 <h2>Better pet days start here.</h2>
             </div>
-            <button class="text-button" type="button">View all <i class="fa-solid fa-arrow-right"></i></button>
+
+            <button class="text-button" type="button">
+                View all
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
 
         <div class="blog-grid">
+
             <article>
                 <span>CARE</span>
                 <h3>How to choose a comfortable harness</h3>
                 <p>Simple things to check before your next walk.</p>
+                <i class="fa-solid fa-arrow-right blog-arrow"></i>
             </article>
+
             <article>
                 <span>TRAVEL</span>
                 <h3>Making pet travel easier</h3>
                 <p>A practical checklist for calmer adventures.</p>
+                <i class="fa-solid fa-arrow-right blog-arrow"></i>
             </article>
+
             <article>
                 <span>LIFESTYLE</span>
                 <h3>Designing a pet-friendly home</h3>
                 <p>Useful ideas that keep your space looking good.</p>
+                <i class="fa-solid fa-arrow-right blog-arrow"></i>
             </article>
+
         </div>
     </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
     <div class="footer-container">
+
         <div class="footer-brand">
             <a class="logo" href="#home">petcare</a>
             <p>Thoughtfully designed essentials for modern pets.</p>
@@ -943,25 +334,41 @@
 
         <div class="footer-column">
             <h3>Info</h3>
-            <a href="#story">Our story</a><a href="#shop">Shop</a><a href="#sets">sets</a><a href="#blog">Blog</a>
+            <a href="#story">Our story</a>
+            <a href="#shop">Shop</a>
+            <a href="#sets">sets</a>
+            <a href="#blog">Blog</a>
         </div>
+
         <div class="footer-column">
             <h3>Support</h3>
-            <a href="#shop">Shipping</a><a href="#shop">Returns</a><a href="#shop">Size guide</a><a href="#shop">Contact</a>
+            <a href="#shop">Shipping</a>
+            <a href="#shop">Returns</a>
+            <a href="#shop">Size guide</a>
+            <a href="#shop">Contact</a>
         </div>
+
         <div class="footer-column">
             <h3>For Retailers</h3>
-            <a href="#shop">Wholesale</a><a href="#shop">Trade account</a><a href="#shop">Retailer login</a>
+            <a href="#shop">Wholesale</a>
+            <a href="#shop">Trade account</a>
+            <a href="#shop">Retailer login</a>
         </div>
+
         <div class="footer-column">
             <h3>Work With Us</h3>
-            <a href="#real-pets">Real pets</a><a href="#blog">Creators</a><a href="#blog">Careers</a><a href="#blog">Collaborate</a>
+            <a href="#real-pets">Real pets</a>
+            <a href="#blog">Creators</a>
+            <a href="#blog">Careers</a>
+            <a href="#blog">Collaborate</a>
         </div>
 
         <div class="footer-image">
             <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=700&q=85"
-                 alt="Happy dog sitting outdoors" loading="lazy">
+                 alt="Happy dog sitting outdoors"
+                 loading="lazy">
         </div>
+
     </div>
 
     <div class="footer-bottom">
@@ -970,6 +377,8 @@
     </div>
 </footer>
 
+<!-- JavaScript -->
 <script src="script.js"></script>
+
 </body>
 </html>
