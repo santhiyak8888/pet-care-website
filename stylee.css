@@ -583,12 +583,18 @@ h1 {
 .menu-toggle {
     display: none !important;
 }
-
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .menu-toggle {
         display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: transparent;
+        color: purple;
+        font-size: 28px;
+        cursor: pointer;
     }
-
+}
     header {
         position: static !important;
         top: auto !important;
