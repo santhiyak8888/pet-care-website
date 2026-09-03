@@ -183,28 +183,14 @@ window.addEventListener('scroll', () => {
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
-
-// ===== ACTIVE NAV LINK HIGHLIGHTING =====
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('nav a');
-
-window.addEventListener('scroll', () => {
-    let current = '';
+// ===== KEYBOARD ACCESSIBILITY =====
+document.querySelectorAll('.card, .card1, .card2').forEach(card => {
+    card.setAttribute('tabindex', '0');
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.style.color = 'purple';
-        if (link.getAttribute('href').includes(current)) {
-            link.style.color = 'white';
-            link.style.backgroundColor = 'purple';
-            link.style.borderRadius = '5px';
+    card.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
         }
     });
 });
