@@ -1,248 +1,132 @@
-/* =========================================
-   MOBILE MENU
-========================================= */
+/* =========================
+   PetCare - Interactions
+   ========================= */
 
-const menuBtn = document.getElementById("menuBtn");
+const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
+const cartCount = document.getElementById("cartCount");
+const year = document.getElementById("year");
 
-menuBtn.addEventListener("click", () => {
+let cart = 0;
 
-    navLinks.classList.toggle("active");
+/* Mobile menu */
+menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
 
-    const icon = menuBtn.querySelector("i");
-
-    icon.classList.toggle("fa-bars");
-    icon.classList.toggle("fa-xmark");
-
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
 });
 
-
-/* Close mobile menu after selecting a link */
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
+/* Close mobile menu after navigation */
+document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
-
-        navLinks.classList.remove("active");
-
-        const icon = menuBtn.querySelector("i");
-
-        icon.classList.add("fa-bars");
-        icon.classList.remove("fa-xmark");
-
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
     });
-
 });
 
-
-/* =========================================
-   CART
-========================================= */
-
-let cartCount = 0;
-
-const cartCounter = document.getElementById("cartCount");
-
-document.querySelectorAll(".add-cart").forEach(button => {
-
+/* Smooth-scroll buttons */
+document.querySelectorAll("[data-scroll]").forEach((button) => {
     button.addEventListener("click", () => {
+        const target = document.querySelector(button.dataset.scroll);
 
-        cartCount++;
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
+});
 
-        cartCounter.textContent = cartCount;
+/* Simple cart interaction */
+document.querySelectorAll(".add-cart").forEach((button) => {
+    button.addEventListener("click", () => {
+        cart++;
+        cartCount.textContent = cart;
 
-        /* Small success animation */
-
-        button.innerHTML =
-            '<i class="fa-solid fa-check"></i>';
-
-        button.style.transform = "scale(1.15)";
+        showToast(`${button.dataset.product} added to your bag.`);
+        button.textContent = "Added ✓";
 
         setTimeout(() => {
-
-            button.innerHTML =
-                '<i class="fa-solid fa-plus"></i>';
-
-            button.style.transform = "";
-
-        }, 900);
-
+            button.textContent = "Add to bag";
+        }, 1200);
     });
-
 });
 
-
-/* =========================================
-   WISHLIST
-========================================= */
-
-document.querySelectorAll(".wishlist").forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        button.classList.toggle("active");
-
-        const icon = button.querySelector("i");
-
-        icon.classList.toggle("fa-regular");
-        icon.classList.toggle("fa-solid");
-
-    });
-
-});
-
-
-/* =========================================
-   SEARCH
-========================================= */
-
-const searchButton =
-    document.querySelector(".icon-btn");
-
-const searchModal =
-    document.getElementById("searchModal");
-
-const closeSearch =
-    document.getElementById("closeSearch");
-
-const searchInput =
-    document.getElementById("searchInput");
-
-const searchMessage =
-    document.getElementById("searchMessage");
-
-
-searchButton.addEventListener("click", () => {
-
-    searchModal.classList.add("active");
-
-    setTimeout(() => {
-        searchInput.focus();
-    }, 100);
-
-});
-
-
-closeSearch.addEventListener("click", () => {
-
-    searchModal.classList.remove("active");
-
-});
-
-
-/* Close search when clicking outside */
-
-searchModal.addEventListener("click", event => {
-
-    if (event.target === searchModal) {
-
-        searchModal.classList.remove("active");
-
-    }
-
-});
-
-
-/* Simple product search */
-
-searchInput.addEventListener("input", () => {
-
-    const search =
-        searchInput.value.toLowerCase().trim();
-
-    const products =
-        document.querySelectorAll(".product-card");
-
-    let found = false;
-
-    products.forEach(product => {
-
-        const name =
-            product
-                .querySelector("h3")
-                .textContent
-                .toLowerCase();
-
-        if (!search || name.includes(search)) {
-
-            product.style.display = "";
-
-            found = true;
-
-        } else {
-
-            product.style.display = "none";
-
-        }
-
-    });
-
-
-    if (search && !found) {
-
-        searchMessage.textContent =
-            "No matching product found.";
-
+/* Cart button */
+document.getElementById("cartButton").addEventListener("click", () => {
+    if (cart === 0) {
+        showToast("Your bag is empty — pick something you love.");
     } else {
-
-        searchMessage.textContent = "";
-
+        showToast(`You have ${cart} item${cart > 1 ? "s" : ""} in your bag.`);
     }
-
 });
 
+/* Toast message */
+function showToast(message) {
+    let toast = document.querySelector(".toast");
 
-/* =========================================
-   SCROLL REVEAL
-========================================= */
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.className = "toast";
+        document.body.appendChild(toast);
+    }
 
-const revealObserver =
-    new IntersectionObserver(
+    toast.textContent = message;
+    toast.classList.add("show");
 
-        entries => {
+    clearTimeout(toast.timer);
 
-            entries.forEach(entry => {
+    toast.timer = setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2200);
+}
 
-                if (entry.isIntersecting) {
+/* Scroll reveal */
+const revealItems = document.querySelectorAll(".reveal");
 
-                    entry.target.classList.add("show");
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    {
+        threshold: 0.12
+    }
+);
 
-                    revealObserver.unobserve(
-                        entry.target
-                    );
+revealItems.forEach((item) => revealObserver.observe(item));
 
-                }
+/* Active navigation link while scrolling */
+const sections = document.querySelectorAll("main section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
 
-            });
+window.addEventListener("scroll", () => {
+    let currentSection = "home";
 
-        },
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 150;
 
-        {
-            threshold: 0.12
+        if (window.scrollY >= sectionTop) {
+            currentSection = section.id;
         }
+    });
 
-    );
-
-
-document.querySelectorAll(".reveal").forEach(element => {
-
-    revealObserver.observe(element);
-
+    navItems.forEach((link) => {
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${currentSection}`
+        );
+    });
 });
 
-
-/* =========================================
-   ESCAPE KEY
-========================================= */
-
-document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape") {
-
-        searchModal.classList.remove("active");
-
-        navLinks.classList.remove("active");
-
-    }
-
-});
+/* Footer year */
+year.textContent = new Date().getFullYear();
