@@ -579,3 +579,18 @@ h1 {
         width: 100%;
     }
 }
+/* MOBILE / TABLET MENU ONLY */
+.menu-toggle {
+    display: none !important;
+}
+
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: flex !important;
+    }
+
+    header {
+        position: static !important;
+        top: auto !important;
+    }
+}
