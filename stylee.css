@@ -457,6 +457,10 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    header {
+    position: static;
+    }
+    
     nav {
         flex-direction: column;
         gap: 15px;
@@ -464,10 +468,26 @@ h1 {
     }
 
     ul {
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-    }
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+}
+
+ul > li {
+    margin: 0;
+}
+
+ul > li > a {
+    display: block;
+    padding: 6px 8px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+
 
     h1 {
         font-size: 32px;
