@@ -168,21 +168,7 @@ document.querySelectorAll('.card, .card1, .card2, .section').forEach(el => {
     observer.observe(el);
 });
 
-// ===== SCROLL EFFECT FOR NAV =====
-let lastScrollTop = 0;
-const nav = document.querySelector('nav');
 
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > 100) {
-        nav.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.15)';
-    } else {
-        nav.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
 // ===== KEYBOARD ACCESSIBILITY =====
 document.querySelectorAll('.card, .card1, .card2').forEach(card => {
     card.setAttribute('tabindex', '0');
