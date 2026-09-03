@@ -184,18 +184,6 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-// ===== KEYBOARD ACCESSIBILITY =====
-document.querySelectorAll('.card, .card1, .card2').forEach(card => {
-    card.setAttribute('tabindex', '0');
-    
-    card.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            card.click();
-        }
-    });
-});
-
 // ===== ACTIVE NAV LINK HIGHLIGHTING =====
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('nav a');
