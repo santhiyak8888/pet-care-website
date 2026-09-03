@@ -186,4 +186,28 @@ window.addEventListener('load', () => {
     document.body.style.animation = 'fadeIn 0.5s ease-in-out';
 });
 
+// ===== MOBILE MENU =====
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('nav ul');
+
+if (menuToggle && navMenu) {
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('active');
+
+        menuToggle.setAttribute(
+            'aria-expanded',
+            isOpen ? 'true' : 'false'
+        );
+    });
+
+    // Close menu after selecting a link
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
 console.log('✅ PetCare Script Loaded Successfully');
