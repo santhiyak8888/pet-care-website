@@ -460,7 +460,7 @@ h1 {
     display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 
     /* Header scrolls naturally with the page on mobile */
     header {
