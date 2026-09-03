@@ -579,29 +579,4 @@ h1 {
         width: 100%;
     }
 }
-/* MOBILE / TABLET MENU ONLY */
-.menu-toggle {
-    display: none !important;
-}
-@media screen and (max-width: 1024px) {
-    .menu-toggle {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background: transparent;
-        color: purple;
-        font-size: 28px;
-        cursor: pointer;
-    }
-}
-    header {
-        position: static !important;
-        top: auto !important;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-}
+
