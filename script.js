@@ -227,3 +227,4 @@ window.addEventListener('load', () => {
 });
 
 console.log('✅ PetCare Script Loaded Successfully');
+            
