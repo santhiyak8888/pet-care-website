@@ -577,3 +577,40 @@ ul > li > a {
         width: 100%;
     }
 }
+/* Mobile / large-phone header fix */
+@media (max-width: 1000px) {
+
+    /* Header should scroll normally */
+    header {
+        position: static !important;
+        top: auto !important;
+    }
+
+    /* Keep navigation neat instead of one keyword per line */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px 8px;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0 !important;
+    }
+
+    nav ul li a {
+        white-space: nowrap;
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+}
